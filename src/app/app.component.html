@@ -1,6 +1,6 @@
-{{token|json}}
-<div style="margin: 5em;">
-  <button >Login</button>
-  <button (click)="logout()">Logout</button>
-</div>
+<!-- {{token|json}} -->
 <router-outlet *ngIf="token"></router-outlet>
+<div class="d-flex justify-content-center" style="margin: 5em;">
+  <button  (click)="login()" *ngIf="!token" class="btn btn-primary ">Login</button>
+  <button  (click)="logout()" *ngIf="token" class="btn btn-primary">Logout</button>
+</div>
